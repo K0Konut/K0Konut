@@ -1,0 +1,41 @@
+name: Génération des cartes de stats
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # tous les jours à 1 h (UTC)
+  workflow_dispatch: # lancement manuel
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Générer les cartes
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          # Le token intégré suffit pour les données publiques.
+          # Pour compter aussi tes contributions privées, crée un PAT
+          # et remplace par ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 1
+          THEME: tokyonight
+          ANIMATION: rise
+          AUTO_PUSH: false # on ne pousse rien sur main
+
+      - name: Pousser les cartes sur la branche stats
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: stats
+          build_dir: profile-summary-card-output/tokyonight
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

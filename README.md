@@ -32,12 +32,17 @@
 ## 📊 Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=K0Konut&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&rank_icon=github" alt="Stats GitHub" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=K0Konut&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Langages les plus utilisés" />
+  <img src="https://raw.githubusercontent.com/K0Konut/K0Konut/stats/0-profile-details.svg" alt="Détails du profil" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=K0Konut&theme=tokyonight&hide_border=true&background=0D1117" alt="Streak GitHub" />
+  <img height="170" src="https://raw.githubusercontent.com/K0Konut/K0Konut/stats/3-stats.svg" alt="Stats GitHub" />
+  <img height="170" src="https://raw.githubusercontent.com/K0Konut/K0Konut/stats/2-most-commit-language.svg" alt="Langages les plus utilisés" />
+</p>
+
+<p align="center">
+  <img height="170" src="https://raw.githubusercontent.com/K0Konut/K0Konut/stats/1-repos-per-language.svg" alt="Repos par langage" />
+  <img height="170" src="https://raw.githubusercontent.com/K0Konut/K0Konut/stats/4-productive-time.svg" alt="Heures de commit" />
 </p>
 
 ## 🐍 Le serpent
